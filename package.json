@@ -1,0 +1,27 @@
+{
+  "name": "js-func-spec",
+  "version": "0.1.0",
+  "description": "A Function Specification Lib",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryankharris/js-func-spec.git"
+  },
+  "keywords": [
+    "javascript",
+    "function",
+    "specification",
+    "contract",
+    "type-enforcement",
+    "runtime"
+  ],
+  "author": "Ryan K Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryankharris/js-func-spec/issues"
+  },
+  "homepage": "https://github.com/ryankharris/js-func-spec#readme"
+}
