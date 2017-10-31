@@ -4,7 +4,9 @@
   "description": "A Function Specification Lib",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run do-prettier && npm run test",
+    "do-prettier": "prettier --write ./index.js ./test/unit/index-spec.js",
+    "test": "NODE_ENV=test jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,7 @@
     "specification",
     "contract",
     "type-enforcement",
+    "type-coercion",
     "runtime"
   ],
   "author": "Ryan K Harris",
@@ -23,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/ryankharris/js-func-spec/issues"
   },
-  "homepage": "https://github.com/ryankharris/js-func-spec#readme"
+  "homepage": "https://github.com/ryankharris/js-func-spec#readme",
+  "devDependencies": {
+    "jasmine": "^2.8.0",
+    "prettier": "^1.7.4"
+  }
 }
