@@ -2,26 +2,7 @@
 
 const spec = require("../../index");
 
-describe("js-func-spec", function() {
-  it("should throw error when literalArray.length !== function params length", function() {
-    function mockFn(a) {
-      /*pass*/
-    }
-    let msg =
-      "Error: literalArray length does not match # of params in function-definition";
-    let boundFn = spec.fn.bind(null, [1, 2], mockFn);
-    expect(boundFn).toThrow(msg);
-  });
-
-  it("should throw error when spec'd function receives invalid # of args", function() {
-    function mockFn(a) {
-      /*pass*/
-    }
-    let msg = `Error: expected 1 args, received 0`;
-    let myFn = spec.fn([1], mockFn);
-    expect(myFn).toThrow(msg);
-  });
-
+describe("js-func-spec validator()", function() {
   it("should generate a validator function with expected properties", function() {
     function mockFn1(arg) {
       return true;
@@ -64,4 +45,4 @@ describe("js-func-spec", function() {
       "Error: validator requires that validationFn(literal) returns {boolean} true";
     expect(v).toThrow(msg);
   });
-}); // end describe
+});

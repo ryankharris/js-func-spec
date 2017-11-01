@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run do-prettier && npm run test",
-    "do-prettier": "prettier --write ./index.js ./test/unit/index-spec.js",
+    "do-prettier": "prettier --write ./index.js ./test/unit/*-spec.js",
     "test": "NODE_ENV=test jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json"
   },
   "repository": {
